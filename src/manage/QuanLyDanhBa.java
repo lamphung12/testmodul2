@@ -33,27 +33,27 @@ public class QuanLyDanhBa  {
         }
     }
 
-    public int findByNumberPhone(int soDienThoai){
+    public int findByNumberPhone(String soDienThoai){
         for (int i = 0; i <danhBaList.size() ; i++) {
-            if (danhBaList.get(i).getId()==soDienThoai){
+            if (danhBaList.get(i).getSoDienThoai().contains(soDienThoai)){
                 return i;
             }
         }
         return -1;
     }
 
-    public void edit(int soDienThoai,DanhBa danhBa){
-        int index= findByNumberPhone(soDienThoai);
-        if(index==-1){
-            System.out.println("Khong tim duoc danh ba voi so dien thoai tren");
-        }
-        else{
-            danhBaList.set(index,danhBa);
+    public void edit(String soDienThoai,DanhBa danhBa){
+        int indexOf = findByNumberPhone(soDienThoai);
+        if (indexOf == -1) {
+            System.out.println( "Không tìm được số ĐT nào như trên" );
+        } else {
+            danhBaList.set(indexOf, danhBa);
+            System.out.println( "Bạn đã sửa thành công thông tin danh bạ" );
         }
     }
 
-    public void delete (int soDienThoai){
-        int viTriXoa =findByNumberPhone(soDienThoai);
+    public void delete (String soDienThoai){
+        int viTriXoa = findByNumberPhone(soDienThoai);
         if(viTriXoa==-1){
             System.out.println("Khong co trong danh sach");
         }else{

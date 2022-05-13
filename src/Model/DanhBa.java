@@ -2,7 +2,7 @@ package Model;
 
 public class DanhBa {
     private int id;
-    private int soDienThoai;
+    private String soDienThoai;
     private String nhomDanhBa;
     private String hoVaTen;
     private String gioiTinh;
@@ -14,7 +14,7 @@ public class DanhBa {
     public DanhBa() {
     }
 
-    public DanhBa(int id,int soDienThoai, String nhomDanhBa, String hoVaTen,
+    public DanhBa(int id,String soDienThoai, String nhomDanhBa, String hoVaTen,
                   String gioiTinh, String diaChi, String ngaySinh, String thuDienTu) {
         this.id = id;
         this.soDienThoai = soDienThoai;
@@ -34,11 +34,11 @@ public class DanhBa {
         this.id = id;
     }
 
-    public int getSoDienThoai() {
+    public String getSoDienThoai() {
         return soDienThoai;
     }
 
-    public void setSoDienThoai(int soDienThoai) {
+    public void setSoDienThoai(String soDienThoai) {
         this.soDienThoai = soDienThoai;
     }
 
@@ -92,13 +92,13 @@ public class DanhBa {
 
     @Override
     public String toString() {
-        return "DanhBa : " + id +
-                " , " + soDienThoai +
-                ", " + nhomDanhBa +
-                ", " + hoVaTen +
-                ", " + gioiTinh +
-                ", " + diaChi +
-                ", " + ngaySinh +
-                ", " + thuDienTu ;
+        return id +
+                "," + soDienThoai +
+                "," + nhomDanhBa +
+                "," + hoVaTen +
+                "," + gioiTinh +
+                "," + diaChi +
+                "," + ngaySinh +
+                "," + thuDienTu ;
     }
 }
